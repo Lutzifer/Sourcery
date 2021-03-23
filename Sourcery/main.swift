@@ -67,7 +67,7 @@ extension Configuration {
         }
         _ = templates.allPaths.map(Validators.isReadable(path:))
         guard !templates.isEmpty else {
-            Log.error("No templates provided.")
+            Log.info("No templates provided.")
             exit(.invalidConfig)
         }
         _ = output.path.map(Validators.isWritable(path:))
